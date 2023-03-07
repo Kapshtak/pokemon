@@ -6,20 +6,20 @@ async function fetchPokemons(amount, offset = 0) {
         const res = await fetch(item.url)
         return await res.json()
       })
-      Promise.all(fetches).then((res) => {
-        const found = []
-        for (const pokemon of res) {
-          found.push({
+      Promise.all(fetches).then((response) => {
+        const pokemons = []
+        for (const pokemon of response) {
+          pokemons.push({
             name: pokemon.name,
             img: pokemon.sprites.other.dream_world.front_default
           })
         }
-        dataDiv(found)
+        dataToDiv(pokemons)
       })
     })
 }
 
-const dataDiv = (object) => {
+const dataToDiv = (object) => {
   const result_area = document.getElementById('result_area')
   for (const pokemon of object) {
     const div = document.createElement('div')
@@ -57,4 +57,4 @@ const dataDiv = (object) => {
   }
 } */
 
-fetchPokemons(40, 40)
+fetchPokemons(10, 53)
