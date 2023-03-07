@@ -5,7 +5,70 @@
 }
 
 body {
+  background-image: radial-gradient(#26b150, #3f87a6, rgb(65, 109, 212));
+  background-size: 400%;
   font-family: sans-serif;
-  max-width: 700px;
+  background-position: 25%, 25%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  animation: 15s ease-in 1s infinite reverse both running animBG;
+}
+
+header {
+  text-align: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+#result_area {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
+  max-width: 1000px;
+  display: flex;
+}
+
+.card {
+  background-color: blanchedalmond;
+  margin: 1rem 1rem;
+  border: solid 3px;
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+img {
+  margin: 1rem 1rem;
+  width: 150px;
+  height: 150px;
+  filter: grayscale(80%)
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes animBG {
+  0% {
+    background-position: 25%, 25%;
+  }
+  25% {
+    background-position: 75% 100%;
+  } 
+  50%{
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 25%, 25%;
+  }
 }
