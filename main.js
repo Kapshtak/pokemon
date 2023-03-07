@@ -1,6 +1,36 @@
-let pokemonStorage = []
+async function fetchPokemons(amount, offset = 0) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${amount}`)
+    .then((response) => response.json())
+    .then((json) => {
+      const fetches = json.results.map(async (item) => {
+        const res = await fetch(item.url)
+        return await res.json()
+      })
+      Promise.all(fetches).then((res) => {
+        const found = []
+        for (const pokemon of res) {
+          found.push({
+            name: pokemon.name,
+            img: pokemon.sprites.other.dream_world.front_default
+          })
+        }
+        dataDiv(found)
+      })
+    })
+}
 
-async function fetchPokemons(amount, offset=0) {
+const dataDiv = (object) => {
+  const result_area = document.getElementById('result_area')
+  for (const pokemon of object) {
+    const div = document.createElement('div')
+    div.classList.add('card')
+    const img = div.appendChild(document.createElement('img'))
+    img.src = pokemon.img
+    div.appendChild(document.createElement('h2')).textContent = pokemon.name
+    result_area.appendChild(div)
+  }
+}
+/* async function fetchPokemons(amount, offset=0) {
   const data = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${amount}`, { mode: 'cors' })
   const jsonData = await data.json()
   console.log(jsonData['results'])
@@ -11,18 +41,20 @@ async function fetchPokemons(amount, offset=0) {
     }
     resolve(dataDiv(found))
   })
-}
+} */
 
-const dataDiv = (object) => {
+/* const dataDiv = (object) => {
   const result_area = document.getElementById('result_area')
   for (const pokemon of object) {
     const div = document.createElement('div')
     div.classList.add('card')
     const img = div.appendChild(document.createElement('img'))
-    img.src = `https://raw.githubusercontent.com/pokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.url.split('/').slice(-2, -1)}.svg`
+    img.src = `https://raw.githubusercontent.com/pokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.url
+      .split('/')
+      .slice(-2, -1)}.svg`
     div.appendChild(document.createElement('h2')).textContent = pokemon.name
     result_area.appendChild(div)
   }
-}
+} */
 
-fetchPokemons(500)
+fetchPokemons(40, 40)

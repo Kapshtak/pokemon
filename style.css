@@ -51,7 +51,7 @@ img {
   margin: 1rem 1rem;
   width: 150px;
   height: 150px;
-  filter: grayscale(80%)
+  filter: grayscale(70%);
 }
 
 img:hover {
@@ -64,8 +64,8 @@ img:hover {
   }
   25% {
     background-position: 75% 100%;
-  } 
-  50%{
+  }
+  50% {
     background-position: 100% 25%;
   }
   100% {
