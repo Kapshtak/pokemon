@@ -21,6 +21,30 @@ header {
   margin: 1rem 0;
 }
 
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: start;
+}
+
+.types_boxes,
+.generations_boxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 270px;
+  height: 190px;
+  justify-content: space-around;
+  align-items: start;
+}
+
+#search_input {
+  width: 400px;
+  margin: auto;
+  margin-top: 5px;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -45,8 +69,12 @@ header {
 h2 {
   text-align: center;
   padding: 1rem 0;
-  background-color: black;
-  color: blanchedalmond;
+}
+
+h3 {
+  font-size: 14px;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 img {
@@ -58,6 +86,11 @@ img {
 
 img:hover {
   filter: grayscale(0%);
+}
+
+input[type='text']::placeholder {
+  font-size: 8px;
+  text-align: center;
 }
 
 @keyframes animBG {

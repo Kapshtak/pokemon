@@ -1,3 +1,2 @@
-# Template heading
-
-- template readme.md 
+# Pokedex
+ 
