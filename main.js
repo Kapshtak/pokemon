@@ -39,8 +39,8 @@ async function fetchGeneration(generation) {
 }
 
 async function processData(generation) {
-  pokemonsSummary = []
   const pokemonsAllData = await fetchGeneration(generation)
+  pokemonsSummary = []
   for (const pokemon of pokemonsAllData) {
     const types = []
     for (const type of pokemon.types) {
