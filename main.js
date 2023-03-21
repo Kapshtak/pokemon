@@ -105,13 +105,33 @@ function dataToDiv(array) {
   })
 }
 
+/* Search in all generations unless type checkboxes are selected. 
+If at least one type is selected, search within it */
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase()
-  const filteredData = pokemonsSummary.filter(
-    (item) =>
-      item.name.includes(query) ||
-      item.type.some((type) => type.includes(query))
-  )
+  const types = []
+  let filteredData 
+    typesCheckBox.forEach((element) => {
+      if (element.checked) {
+        types.push(element.value)
+      }
+    })
+    if (types.length > 0) {
+      filteredData = pokemonsSummary.filter((pokemon) =>
+        types.some((type) => pokemon.type.includes(type))
+      ).filter(
+        (item) =>
+          item.name.includes(query) ||
+          item.type.some((type) => type.includes(query))
+      )
+    
+    } else {
+      filteredData = pokemonsSummary.filter(
+        (item) =>
+          item.name.includes(query) ||
+          item.type.some((type) => type.includes(query))
+      )
+    }
   resultArea.innerHTML = ''
   if (filteredData.length > 0) {
     dataToDiv(filteredData)
