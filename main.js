@@ -108,6 +108,10 @@ function dataToDiv(array) {
 /* Search in all generations unless type checkboxes are selected. 
 If at least one type is selected, search within it */
 searchInput.addEventListener('input', () => {
+  if (pokemonsSummary.length === 0) {
+    processData(1)
+    generationsRadioButton[0].checked = true
+  }
   const query = searchInput.value.toLowerCase()
   const types = []
   let filteredData 
