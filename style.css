@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -266,7 +266,7 @@ input[type='text']::placeholder {
 
 .card {
   position: relative;
-  background-color: blanchedalmond;
+  background-color: white;
   width: 200px;
   height: 280px;
   margin: 1rem 1rem;
@@ -281,13 +281,12 @@ input[type='text']::placeholder {
   left: 0;
 }
 
-
 .background_1 {
   position: absolute;
   top: 0%;
   left: 0%;
   width: 50%;
-  height: 40%;
+  height: 90px;
   filter: opacity(0.15);
   z-index: -1;
 }
@@ -297,27 +296,27 @@ input[type='text']::placeholder {
   top: 0%;
   left: 50%;
   width: 50%;
-  height: 40%;
+  height: 90px;
   filter: opacity(0.15);
   z-index: -1;
 }
 
 .background_3 {
   position: absolute;
-  top: 40%;
+  top: 90px;
   left: 0%;
   width: 50%;
-  height: 40%;
+  height: 90px;
   filter: opacity(0.15);
   z-index: -1;
 }
 
 .background_4 {
   position: absolute;
-  top: 40%;
+  top: 90px;
   left: 50%;
   width: 50%;
-  height: 40%;
+  height: 90px;
   filter: opacity(0.15);
   z-index: -1;
 }
@@ -453,6 +452,9 @@ img:hover {
   h1 {
     padding: 0.3rem 0;
   }
+  h2 {
+    padding-top: 0.5rem;
+  }
   h3 {
     font-size: 12px;
     padding-left: 0.5rem;
@@ -493,7 +495,7 @@ img:hover {
   }
   .card {
     position: relative;
-    background-color: blanchedalmond;
+    background-color: white;
     width: 150px;
     margin: 1rem 1rem;
     margin-top: 0;
