@@ -5,243 +5,213 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Pokémons</title>
+    <link rel="icon" type="image/x-icon" href="/media/images/favicon.ico">
   </head>
   <body>
-    <header><h1>Pokemons</h1></header>
+    <header>
+      <div class="logo"></div>
+      <button id="mobile">Filters</button>
+    </header>
     <div class="menu">
       <div class="generations">
-        <h2>Generations</h2>
+        <h1>Generations</h1>
         <div class="generations_boxes">
-          <label for="first"
-            >First GEN<input
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="first"
-              name="pokemon_generations"
-              value="1" /><br
-          /></label>
-          <label for="second"
-            >Second GEN<input
+              value="1"
+              checked
+            /><span class="gen_label">First GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="second"
-              name="pokemon_generations"
-              value="2" /><br
-          /></label>
-          <label for="third"
-            >Third GEN<input
+              value="2"
+            /><span class="gen_label">Second GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="third"
-              name="pokemon_generations"
-              value="3" /><br
-          /></label>
-          <label for="fourth"
-            >Fourth GEN<input
+              value="3"
+            /><span class="gen_label">Third GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="fourth"
-              name="pokemon_generations"
-              value="4" /><br
-          /></label>
-          <label for="fifth"
-            >Fifth GEN<input
+              value="4"
+            /><span class="gen_label">Fourth GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="fifth"
-              name="pokemon_generations"
-              value="5" /><br
-          /></label>
-          <label for="sixth"
-            >Sixth GEN<input
+              value="5"
+            /><span class="gen_label">Fifth GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="sixth"
-              name="pokemon_generations"
-              value="6" /><br
-          /></label>
-          <label for="seventh"
-            >Seventh GEN<input
+              value="6"
+            /><span class="gen_label">Sixth GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="seventh"
-              name="pokemon_generations"
-              value="7" /><br
-          /></label>
-          <label for="eighth"
-            >Eighth GEN<input
+              value="7"
+            /><span class="gen_label">Seventh GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
+              name="pokemon_generations"
               id="eighth"
-              name="pokemon_generations"
-              value="8" /><br
-          /></label>
-          <label for="ninth"
-            >Ninth GEN<input
+              value="8"
+            /><span class="gen_label">Eighth GEN</span></label
+          >
+          <label
+            ><input
               type="radio"
-              id="ninth"
               name="pokemon_generations"
-              value="9" /><br
-          /></label>
+              id="ninth"
+              value="9"
+            /><span class="gen_label">Ninth GEN</span></label
+          >
         </div>
       </div>
       <div class="types">
-        <h2>Types</h2>
+        <h1>Types</h1>
         <div class="types_boxes">
-          <label for="normal"
-            >normal<input
+          <label
+            ><input type="checkbox" name="pokemon_types" value="normal" /><span
+              class="label_normal"
+              >Normal</span
+            ></label
+          >
+          <label
+            ><input
               type="checkbox"
-              id="normal"
               name="pokemon_types"
-              value="normal" /><br
-          /></label>
-
-          <label for="fighting"
-            >fighting<input
+              value="fighting"
+            /><span class="label_fighting">Fighting</span></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="flying" /><span
+              class="label_flying"
+              >Flying</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="poison" /><span
+              class="label_poison"
+              >Poison</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="ground" /><span
+              class="label_ground"
+              >Ground</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="rock" /><span
+              class="label_rock"
+              >Rock</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="bug" /><span
+              class="label_bug"
+              >Bug</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="ghost" /><span
+              class="label_ghost"
+              >Ghost</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="steel" /><span
+              class="label_steel"
+              >Steel</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="fire" /><span
+              class="label_fire"
+              >Fire</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="water" /><span
+              class="label_water"
+              >Water</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="grass" /><span
+              class="label_grass"
+              >Grass</span
+            ></label
+          >
+          <label
+            ><input
               type="checkbox"
-              id="fighting"
               name="pokemon_types"
-              value="fighting" /><br
-          /></label>
-
-          <label for="flying"
-            >flying<input
-              type="checkbox"
-              id="flying"
-              name="pokemon_types"
-              value="flying" /><br
-          /></label>
-
-          <label for="poison"
-            >poison<input
-              type="checkbox"
-              id="poison"
-              name="pokemon_types"
-              value="poison" /><br
-          /></label>
-
-          <label for="ground"
-            >ground<input
-              type="checkbox"
-              id="ground"
-              name="pokemon_types"
-              value="ground" /><br
-          /></label>
-
-          <label for="rock"
-            >rock<input
-              type="checkbox"
-              id="rock"
-              name="pokemon_types"
-              value="rock" /><br
-          /></label>
-
-          <label for="bug"
-            >bug<input
-              type="checkbox"
-              id="bug"
-              name="pokemon_types"
-              value="bug" /><br
-          /></label>
-
-          <label for="ghost"
-            >ghost<input
-              type="checkbox"
-              id="ghost"
-              name="pokemon_types"
-              value="ghost" /><br
-          /></label>
-
-          <label for="steel"
-            >steel<input
-              type="checkbox"
-              id="steel"
-              name="pokemon_types"
-              value="steel" /><br
-          /></label>
-
-          <label for="fire"
-            >fire<input
-              type="checkbox"
-              id="fire"
-              name="pokemon_types"
-              value="fire" /><br
-          /></label>
-
-          <label for="water"
-            >water<input
-              type="checkbox"
-              id="water"
-              name="pokemon_types"
-              value="water" /><br
-          /></label>
-
-          <label for="grass"
-            >grass<input
-              type="checkbox"
-              id="grass"
-              name="pokemon_types"
-              value="grass" /><br
-          /></label>
-
-          <label for="electric"
-            >electric<input
-              type="checkbox"
-              id="electric"
-              name="pokemon_types"
-              value="electric" /><br
-          /></label>
-
-          <label for="psychic"
-            >psychic<input
-              type="checkbox"
-              id="psychic"
-              name="pokemon_types"
-              value="psychic" /><br
-          /></label>
-
-          <label for="ice"
-            >ice<input
-              type="checkbox"
-              id="ice"
-              name="pokemon_types"
-              value="ice" /><br
-          /></label>
-
-          <label for="dragon"
-            >dragon<input
-              type="checkbox"
-              id="dragon"
-              name="pokemon_types"
-              value="dragon" /><br
-          /></label>
-
-          <label for="dark"
-            >dark<input
-              type="checkbox"
-              id="dark"
-              name="pokemon_types"
-              value="dark" /><br
-          /></label>
-
-          <label for="fairy"
-            >fairy<input
-              type="checkbox"
-              id="fairy"
-              name="pokemon_types"
-              value="fairy" /><br
-          /></label>
-
-          <label for="unknown"
-            >unknown<input
-              type="checkbox"
-              id="unknown"
-              name="pokemon_types"
-              value="unknown" /><br
-          /></label>
-
-          <label for="shadow"
-            >shadow<input
-              type="checkbox"
-              id="shadow"
-              name="pokemon_types"
-              value="shadow" /><br
-          /></label>
+              value="electric"
+            /><span class="label_electric">Electric</span></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="psychic" /><span
+              class="label_psychic"
+              >Psychic</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="ice" /><span
+              class="label_ice"
+              >Ice</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="dragon" /><span
+              class="label_dragon"
+              >Dragon</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="dark" /><span
+              class="label_dark"
+              >Dark</span
+            ></label
+          >
+          <label
+            ><input type="checkbox" name="pokemon_types" value="fairy" /><span
+              class="label_fairy"
+              >Fairy</span
+            ></label
+          >
         </div>
       </div>
+      <button id="hide">Hide filters</button>
     </div>
     <input
       type="text"
@@ -252,5 +222,6 @@
       <div id="result_area"></div>
     </div>
     <script type="module" src="./main.js"></script>
+    <button id="back_to_top">Back to top</button>
   </body>
 </html>
